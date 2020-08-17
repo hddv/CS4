@@ -29,7 +29,6 @@ footer{
 .space{
 
   position: absolute;
-
   background: linear-gradient(45deg, #CDFDFD, #FECDCD);
 
   min-width: 240px;
@@ -49,6 +48,12 @@ footer{
 
 
 input{
-  width: 60px;
+  width: 90px;
+  height: 20px;
   text-align: center;
+  font-size: 16px;
+}
+
+.inputField{
+  padding: 0 10px;
 }
