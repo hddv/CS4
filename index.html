@@ -15,9 +15,9 @@
     <div class="space">
       <h1>linear-gradient</h1>
       <div class="inputField">
-      <input type="text" name="degree" placeholder="degree" value="45deg">
-      <input type="text" name="color1" placeholder="color1" value="#CDFDFD">
-      <input type="text" name="color2" placeholder="color2" value="#FECDCD">
+      <input type="text" id="input1" name="degree" placeholder="degree" value="45deg" onchange="myFunction()">
+      <input type="text" id="input2" name="color1" placeholder="color1" value="#CDFDFD" onchange="myFunction2()">
+      <input type="text" id="input3" name="color2" placeholder="color2" value="#FECDCD">
       </div>
     </div>
 
@@ -32,4 +32,16 @@
 <footer>
   <p>Inpired by <a href="https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design/create-a-gradual-css-linear-gradient">FreeCodeCamp</a></p>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+  function myFunction(){
+    console.log($("input").val());
+
+    $(".space").css("background", "linear-gradient(" + $("input").val() +", #CDFDFD, #FECDCD)");
+  };
+
+
+</script>
 </html>
