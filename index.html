@@ -17,7 +17,7 @@
       <div class="inputField">
       <input type="text" id="input1" name="degree" placeholder="degree" value="45deg" onchange="myFunction()">
       <input type="text" id="input2" name="color1" placeholder="color1" value="#CDFDFD" onchange="myFunction2()">
-      <input type="text" id="input3" name="color2" placeholder="color2" value="#FECDCD">
+      <input type="text" id="input3" name="color2" placeholder="color2" value="#FECDCD" onchange="myFunction3()">
       </div>
     </div>
 
@@ -37,11 +37,31 @@
 <script>
 
   function myFunction(){
-    console.log($("input").val());
-
-    $(".space").css("background", "linear-gradient(" + $("input").val() +", #CDFDFD, #FECDCD)");
+    console.log($("input[name='degree']").val());
+    $(".space").css("background", "linear-gradient(" 
+    + $("input[name='degree']").val() 
+    + ", " + $("input[name='color1']").val() 
+    + ", " + $("input[name='color2']").val() 
+    + ")");
   };
 
+  function myFunction2(){
+    console.log($("input[name='color1']").val());
+    $(".space").css("background", "linear-gradient(" 
+    + $("input[name='degree']").val() 
+    + ", " + $("input[name='color1']").val() 
+    + ", " + $("input[name='color2']").val() 
+    + ")");
+  }
+
+  function myFunction3(){
+    console.log($("input[name='color2']").val());
+    $(".space").css("background", "linear-gradient(" 
+    + $("input[name='degree']").val() 
+    + ", " + $("input[name='color1']").val() 
+    + ", " + $("input[name='color2']").val() 
+    + ")");
+  }
 
 </script>
 </html>
